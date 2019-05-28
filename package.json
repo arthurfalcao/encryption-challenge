@@ -1,0 +1,13 @@
+{
+  "name": "encryption",
+  "version": "0.1.0",
+  "dependencies": {
+    "axios": "0.18.0",
+    "crypto": "1.0.1",
+    "dotenv": "8.0.0",
+    "request": "2.88.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
