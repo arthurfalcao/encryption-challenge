@@ -3,13 +3,15 @@ const axios = require('axios');
 const crypto = require('crypto');
 const fs = require('fs');
 const { join } = require('path');
+const logSymbols = require('log-symbols');
+
 const sha1 = crypto.createHash('sha1');
 
 require('dotenv').config();
 
 const token = process.env.TOKEN;
 if (!token) {
-  console.log('Token não setado no .env');
+  console.log(logSymbols.error, 'Token não setado no .env');
   return;
 }
 
@@ -54,10 +56,10 @@ request(
   },
   (err, res, body) => {
     if (err) {
-      console.log(err);
+      console.log(logSymbols.error, err);
     }
 
-    console.log(body);
+    console.log(logSymbols.success, body);
   }
 );
 
